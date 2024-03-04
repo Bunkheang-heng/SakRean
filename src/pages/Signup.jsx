@@ -3,14 +3,15 @@ import { FaRegEyeSlash, FaRegEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import OAuth from './components/OAuth';
 
-export default function Signin() {
+export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     password: '',
+    name:'',
   });
 
-  const { email, password } = formData;
+  const {name, email, password } = formData;
 
   function onChange(e) {
     setFormData((prevState) => ({
@@ -20,10 +21,18 @@ export default function Signin() {
   }
 
   return (
-    <section className="flex justify-center items-center h-screen">
+    <section className="flex justify-center items-center h-screen ">
       <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20 mt-10 ml-5">
-        <h1 className="text-3xl text-center mt-6 font-bold mb-6">Sign in</h1>
+        <h1 className="text-3xl text-center mt-6 font-bold mb-7">Sign up</h1>
         <form>
+        <input
+            type="text"
+            className="w-full px-4 py-2 text-xl border-gray-300 rounded transition ease-in-out mb-6"
+            id="name"
+            value={name}
+            onChange={onChange}
+            placeholder="Full Name"
+          />
           <input
             type="email"
             className="w-full px-4 py-2 text-xl border-gray-300 rounded transition ease-in-out"
@@ -55,9 +64,9 @@ export default function Signin() {
           </div>
           <div className="flex justify-between whitespace-nowrap sm:text-lg">
             <p className="mb-6">
-              Don't have an account?<span> </span>
-              <Link to="/sign-up" className="text-red-600 hover:text-red-400">
-                Register
+               Have an account?<span> </span>
+              <Link to="/sign-in" className="text-red-600 hover:text-red-400">
+                Sign up
               </Link>
             </p>
             <p>
