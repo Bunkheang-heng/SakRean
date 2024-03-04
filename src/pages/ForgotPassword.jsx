@@ -33,7 +33,7 @@ export default function ForgotPassword() {
               <span className='ml-3 mr-3'>
                 OR
               </span>
-              <Link to="/sing-in" className="text-red-600 hover:text-red-400">
+              <Link to="/sign-in" className="text-red-600 hover:text-red-400">
                 Sign In
               </Link>
             </p>

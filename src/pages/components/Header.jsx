@@ -13,10 +13,11 @@ export default function Header() {
   return (
     <div className="bg-white border-b shadow-sm sticky top-0 z-50">
       <header className='flex justify-between items-center px-3 max-w-6xl mx-auto'>
-        <div>
-            <img src="https://i.stci.uk/sites/www.savethechildren.net/themes/stcui/img/stc_logo.svg" alt="Logo of Save the children" className='h-5 cursor-pointer'
+        <div className='flex'>
+            <img src='https://t3.ftcdn.net/jpg/03/92/80/46/240_F_392804645_tUQxo5EgPXvFGxn5OQguX1BiYlI6lCOV.jpg' alt="Logo of Save the children" className='h-5 cursor-pointer'
             onClick={()=>navigate("/")}
             />
+            <h2 className="text-blue-900 "><b>SakRean</b> <b>សាករៀន</b></h2>
         </div>
 
         <div>

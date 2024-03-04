@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { FaRegEyeSlash, FaRegEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import OAuth from './components/OAuth';
+import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth'
+import {db} from '../firebase'
+import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export default function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,6 +17,7 @@ export default function Signup() {
   });
 
   const {name, email, password } = formData;
+  const navigate = useNavigate();
 
   function onChange(e) {
     setFormData((prevState) => ({
@@ -20,11 +26,35 @@ export default function Signup() {
     }));
   }
 
+  async function onSubmit(e){
+
+    e.preventDefault()
+    try {
+      const auth = getAuth();
+      const userCrodential = await createUserWithEmailAndPassword(auth, email, password); 
+      updateProfile(auth.currentUser, {
+        displayName: name
+      })
+      const user = userCrodential.user
+      const formDataCopy = {...formData}
+      delete formDataCopy.password
+      formDataCopy.timestamp = serverTimestamp();
+
+      await setDoc(doc(db, "users", user.uid), formDataCopy)
+      navigate("/");
+      toast.success("Registration successfull"); 
+
+    } catch (error) {
+      toast.error("There's an error in registration")
+    }
+
+  }
+
   return (
     <section className="flex justify-center items-center h-screen ">
       <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20 mt-10 ml-5">
         <h1 className="text-3xl text-center mt-6 font-bold mb-7">Sign up</h1>
-        <form>
+        <form onSubmit={onSubmit}>
         <input
             type="text"
             className="w-full px-4 py-2 text-xl border-gray-300 rounded transition ease-in-out mb-6"
@@ -79,7 +109,7 @@ export default function Signup() {
             type="submit"
             className="bg-blue-600 w-full pt-3 pb-3 active:opacity-70 text-white text-lg"
           >
-            Sign in
+            Sign up
           </button>
           <div className="my-4 before:border-t flex before:flex-1 items-center before:border-gray-300 after:border-t after:flex-1 after:border-gray-300">
             <p className="text-center font-semibold mx-4">OR</p>
