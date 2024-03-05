@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { FaRegEyeSlash, FaRegEye } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import OAuth from './components/OAuth';
+import { signInWithEmailAndPassword, getAuth } from 'firebase/auth';
+import { toast } from 'react-toastify';
 
 export default function Signin() {
   const [showPassword, setShowPassword] = useState(false);
@@ -11,6 +13,7 @@ export default function Signin() {
   });
 
   const { email, password } = formData;
+  const navigate = useNavigate();
 
   function onChange(e) {
     setFormData((prevState) => ({
@@ -19,11 +22,27 @@ export default function Signin() {
     }));
   }
 
+  async function onSubmit(e){
+    e.preventDefault();
+    try {
+      const auth = getAuth();
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      if(userCredential.user){
+        navigate("/")
+      } 
+      
+    } catch (e) {
+      toast.error("bad user credentials");
+      console.log(e)
+      
+    }
+  }
+
   return (
     <section className="flex justify-center items-center h-screen">
       <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20 mt-10 ml-5">
         <h1 className="text-3xl text-center mt-6 font-bold mb-6">Sign in</h1>
-        <form>
+        <form onSubmit={onSubmit}>
           <input
             type="email"
             className="w-full px-4 py-2 text-xl border-gray-300 rounded transition ease-in-out"
