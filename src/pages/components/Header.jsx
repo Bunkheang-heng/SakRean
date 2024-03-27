@@ -25,7 +25,7 @@ export default function Header() {
     }, [auth]);
 
   return (
-    <div className="bg-white border-b shadow-sm sticky top-0 z-50">
+    <div className="bg-white border-b shadow-sm sticky top-0 z-40">
       <header className='flex justify-between items-center px-3 max-w-6xl mx-auto'>
         <div className='flex'>
             <img src='https://t3.ftcdn.net/jpg/03/92/80/46/240_F_392804645_tUQxo5EgPXvFGxn5OQguX1BiYlI6lCOV.jpg' alt="Logo of Save the children" className='h-5 cursor-pointer'

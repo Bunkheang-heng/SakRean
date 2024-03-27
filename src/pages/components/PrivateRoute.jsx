@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet, Navigate } from 'react-router';
 import {UserAuthStatus} from '../../hooks/userAuthStatus';
+import Spinner from './Spinner';
 
 export default function PrivateRoute() {
     const {loggedIn, checkingStatus} = UserAuthStatus(); 
@@ -8,7 +9,7 @@ export default function PrivateRoute() {
     if(checkingStatus){
         return (
             <div>
-                <h3>Loading...</h3>
+                <Spinner />
             </div>
         )
     }
