@@ -41,6 +41,15 @@ export default function Signin() {
   return (
     <section className="flex justify-center items-center h-screen">
       <div className="w-full md:w-[67%] lg:w-[40%] lg:ml-20 mt-10 ml-5">
+        <div className='bg-'>
+        <div className='flex justify-between'>
+     <center> <img src='https://t3.ftcdn.net/jpg/03/92/80/46/240_F_392804645_tUQxo5EgPXvFGxn5OQguX1BiYlI6lCOV.jpg' alt="Logo of Save the children" className='h-50 cursor-pointer'/></center>
+     <div>
+     <p className='text-4xl mt-12'><b>Sak<span className='text-yellow-300 p-0 m-0'>Rean</span></b></p>
+     <p className='text-4xl mt-8'><b>សាក<span className='text-yellow-300 p-0 m-0'>រៀន</span></b></p>
+     </div>
+     </div>
+     </div>
         <h1 className="text-3xl text-center mt-6 font-bold mb-6">Sign in</h1>
         <form onSubmit={onSubmit}>
           <input
