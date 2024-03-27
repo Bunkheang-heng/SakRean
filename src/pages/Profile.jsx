@@ -4,6 +4,8 @@ import {  useNavigate } from 'react-router';
 import { toast } from 'react-toastify';
 import { db } from '../firebase';
 import { doc, updateDoc } from 'firebase/firestore';
+import { PiStudent } from "react-icons/pi";
+import { Link } from 'react-router-dom';
 export default function Profile() {
   const auth = getAuth(); 
   const navigate = useNavigate();
@@ -76,6 +78,13 @@ export default function Profile() {
                 </p>
                </div>
           </form>
+          <button type="submit" className='w-full bg-blue-600 text-white uppercase px-7 py-3 text-sm 
+          font-medium rounded shadow-md hover:bg-blue-700 transition duration-150 ease-in-out hover:shadow-lg active:bg-blue-800'>
+            <Link to="/create-listing" className='flex justify-center items-center'>
+            <PiStudent className='mr-2 text-3xl bg-black rounded-full p-1 border-2'/>
+            Creating Courses
+            </Link>
+          </button>
         </div>
       </section>
     </>
