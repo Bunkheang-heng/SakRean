@@ -1,0 +1,59 @@
+/* Styling for the AI help component */
+.ai-help-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ai-help-header {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .ai-help-input-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .ai-help-input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .ai-help-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .ai-help-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .ai-help-loading {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .ai-help-response {
+    margin-top: 20px;
+  }
+  
+  .ai-help-response p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  

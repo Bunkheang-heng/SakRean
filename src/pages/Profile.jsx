@@ -91,6 +91,12 @@ export default function Profile() {
            Update Courses
            </Link>
           </button>
+          <button type="submit" className='w-full bg-purple-600 text-white mt-6 uppercase px-7 py-3 text-sm 
+          font-medium rounded shadow-md hover:bg-purple-700 transition duration-150 ease-in-out hover:shadow-lg active:bg-blue-800'>
+           <Link to="/addingInfo">
+           Adding School Info
+           </Link>
+          </button>
         </div>
       </section>
     </>

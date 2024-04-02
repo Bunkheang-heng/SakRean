@@ -57,6 +57,14 @@ export default function Header() {
             }
             onClick={()=>navigate("/aboutMe")}
             >About Me</li>
+            <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-transparent ${pathMatchRoute("/selfAccessment") && 'text-black border-b-red-600'}` 
+            }
+            onClick={()=>navigate("/selfAccessment")}
+            >Self-Accessment</li>
+             <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-transparent ${pathMatchRoute("/universityInfo") && 'text-black border-b-red-600'}` 
+            }
+            onClick={()=>navigate("/universityInfo")}
+            >UniversityInfo</li>
             </ul>
         </div>
       </header>

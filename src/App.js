@@ -12,7 +12,11 @@ import PrivateRoute from "./pages/components/PrivateRoute";
 import CreateListing from "./pages/CreateListing";
 import ManageCourses from "./pages/ManageCourses";
 import Footer from "./pages/components/Footer";
-import CourseList from "./pages/components/CourseList";
+import Aihelp from "./pages/Aihelp";
+import Quiz from "./pages/Quizz";
+import UniversityPage from "./pages/University";
+import AddUniversityPage from "./pages/UniversityInfo";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -20,7 +24,6 @@ function App() {
     <Router>
       <Header/>
       <Routes>
-
         <Route path="/aboutMe" element = {<AboutMe />}/>
         <Route path="/content" element = {<Content />}/>
         <Route path="/profile" element = {<PrivateRoute />}>
@@ -29,8 +32,11 @@ function App() {
         <Route path="/sign-in" element = {<Signin />}/>
         <Route path="/create-listing" element = {<CreateListing />}/>
         <Route path="/updatecourse" element = {<ManageCourses />}/>
-        <Route path="/courselist" element = {<CourseList />}/>
-      
+        <Route path="/selfAccessment" element = {<Aihelp />}/>
+        <Route path="/quizz" element = {<Quiz />}/>
+        <Route path="/universityInfo" element = {<UniversityPage />}/>
+        <Route path="/addingInfo" element = {<AddUniversityPage />}/>
+        <Route path="/" element = {<Home />}/>
       </Routes>
       <Footer />
     </Router>

@@ -52,8 +52,8 @@ const AboutMe = () => {
         <p>Feel free to reach out to me for collaboration opportunities or project inquiries.</p>
         <ul>
           <li>Email: bunkheangheng99@gmail.com</li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/bunkheang-heng-200b25297/" target="_blank" rel="noopener noreferrer">linkedin.com/in/johndoe</a></li>
-          <li>GitHub: <a href="https://github.com/Bunkheang-heng" target="_blank" rel="noopener noreferrer">github.com/johndoe</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/bunkheang-heng-200b25297/" target="_blank" rel="noopener noreferrer">linkedin.com/in/kheang</a></li>
+          <li>GitHub: <a href="https://github.com/Bunkheang-heng" target="_blank" rel="noopener noreferrer">github.com/kheang</a></li>
           <li>Tele: 0973556059</li>
         
         </ul>

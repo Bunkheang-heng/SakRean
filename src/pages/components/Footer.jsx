@@ -19,10 +19,7 @@ const Footer = () => {
               across different fields of study, allowing users to deepen their knowledge and explore new 
               areas of interest. The platform also features a self-assessment tool that helps users identify 
               their interests, skills, and preferences, and provides personalized recommendations for majors 
-              or career paths that align with their profiles. Whether you're a prospective student exploring 
-              your options, a current student looking for course recommendations, or a 
-              professional seeking career guidance, UniInfo is your go-to resource for making 
-              informed decisions about your education and future career aspirations.
+              or career paths that align with their profiles.
             </p>
             <div className="contact">
               <span>

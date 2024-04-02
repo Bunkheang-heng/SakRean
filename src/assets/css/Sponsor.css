@@ -1,0 +1,13 @@
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    row-gap: 5px;
+    margin-left: 300px;
+    margin-top: 50px;
+  }
+  
+  .Sponsor {
+    width: 200px;
+    margin-top: 50px;
+  }
+  
