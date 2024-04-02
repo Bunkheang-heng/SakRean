@@ -1,0 +1,134 @@
+/* Footer styles */
+.footer {
+    background-color: #f2f2f2; /* Light gray background */
+    padding: 30px 0;
+  }
+  
+  .container {
+    max-width: 1024px; /* Adjust for your desired container width */
+    margin: 0 auto; /* Center the container horizontally */
+    display: flex; /* Allow for flexible layout of footer sections */
+    flex-wrap: wrap; /* Allow sections to wrap if needed */
+    justify-content: space-between; /* Space sections evenly */
+  }
+  
+  .footer-content {
+    display: flex; /* Arrange sections side-by-side */
+    flex-wrap: wrap; /* Allow sections to wrap on smaller screens */
+  }
+  
+  .footer-section {
+    flex: 1 1 auto; /* Allow sections to grow/shrink proportionally */
+    margin: 0 15px 20px; /* Spacing between sections */
+    text-align: left; /* Left-align content within sections */
+  }
+  
+  .about {
+    width: 40%; /* Adjust width as needed for different section sizes */
+  }
+  
+  .links,
+  .contact-form,
+  .socials {
+    width: 20%; /* Adjust width as needed for different section sizes */
+  }
+  
+  .about h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem; /* Adjust heading size */
+    font-weight: bold;
+  }
+  
+  .about p {
+    line-height: 1.5; /* Adjust line spacing */
+  }
+  
+  .contact span {
+    display: block; /* Stack contact info vertically */
+    margin-bottom: 5px;
+  }
+  
+  .contact i {
+    margin-right: 10px; /* Spacing between icon and text */
+    color: #333; /* Adjust icon color */
+  }
+  
+  .links h2,
+  .contact-form h2,
+  .socials h2 {
+    margin-bottom: 15px;
+    font-size: 1.2rem; /* Adjust heading size */
+    font-weight: bold;
+  }
+  
+  .links ul,
+  .socials ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+  }
+  
+  .links li,
+  .socials li {
+    margin-bottom: 10px;
+  }
+  
+  .links a,
+  .socials a {
+    color: #333; /* Adjust link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .links a:hover,
+  .socials a:hover {
+    color: #007bff; /* Adjust hover color */
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+  }
+  
+  .text-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Adjust border style */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .contact-input {
+    resize: none; /* Prevent textareas from resizing vertically */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Adjust button color */
+    color: #fff; /* Adjust button text color */
+    padding: 10px 20px;
+    border: none; /* Remove button border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Indicate clickable behavior */
+    transition: background-color 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0069d9; /* Adjust button hover color */
+  }
+  
+  .socials {
+    text-align: center; /* Center social media links */
+  }
+  
+  .copyright {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #ddd; /* Light gray background for copyright section */
+  }
+  
+  .copyright p {
+    margin: 0;
+    color: #333; /* Adjust copyright text color */
+  }
+  

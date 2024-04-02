@@ -33,11 +33,8 @@ export default function Header() {
             />
             <h2 className="text-blue-900 flex justify-between">
               <div>
-              <b >Sak<span className='text-yellow-300'>Rean</span></b> 
+              <b >Uni<span className='text-yellow-300'>Info</span></b> 
               </div>
-              <div className='ml-5'>
-            <b>សាក<span className='text-yellow-300 '>រៀន</span></b>
-            </div>
             </h2>
         </div>
 
@@ -56,6 +53,10 @@ export default function Header() {
             } 
             onClick={()=>navigate("/profile")}
             >{pageState}</li>
+            <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-transparent ${pathMatchRoute("/aboutMe") && 'text-black border-b-red-600'}` 
+            }
+            onClick={()=>navigate("/aboutMe")}
+            >About Me</li>
             </ul>
         </div>
       </header>

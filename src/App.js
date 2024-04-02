@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Home from "./pages/Home";
+import AboutMe from "./pages/AboutMe";
 import Content from "./pages/Content";
 import ForgotPassword from "./pages/ForgotPassword";
 import Profile from "./pages/Profile";
@@ -10,6 +10,9 @@ import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from "./pages/components/PrivateRoute";
 import CreateListing from "./pages/CreateListing";
+import ManageCourses from "./pages/ManageCourses";
+import Footer from "./pages/components/Footer";
+import CourseList from "./pages/components/CourseList";
 
 function App() {
   return (
@@ -18,17 +21,18 @@ function App() {
       <Header/>
       <Routes>
 
-        <Route path="/" element = {<Home />}/>
+        <Route path="/aboutMe" element = {<AboutMe />}/>
         <Route path="/content" element = {<Content />}/>
-        <Route path="/forgot-password" element = {<ForgotPassword />}/>
         <Route path="/profile" element = {<PrivateRoute />}>
         <Route path="/profile" element = {<Profile />}/>
         </Route>
         <Route path="/sign-in" element = {<Signin />}/>
-        <Route path="/sign-up" element = {<Signout />}/>
         <Route path="/create-listing" element = {<CreateListing />}/>
+        <Route path="/updatecourse" element = {<ManageCourses />}/>
+        <Route path="/courselist" element = {<CourseList />}/>
       
       </Routes>
+      <Footer />
     </Router>
     <ToastContainer
     position="bottom-center"
